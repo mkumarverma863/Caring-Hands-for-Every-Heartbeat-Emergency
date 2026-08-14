@@ -1,0 +1,6 @@
+{
+  "name": "ElderGuard - Smart Elderly Safety & Emergency Assistance",
+  "description": "Smart elderly safety, health monitoring, wearable fall detection, live location tracking, and emergency SOS prototype.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,249 @@
+@import "tailwindcss";
+
+:root, .theme-minimal-light {
+  --bg-main: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-subtle: #f1f5f9;
+  --bg-hover: #e2e8f0;
+  --border-subtle: #e2e8f0;
+  --border-strong: #cbd5e1;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+  --accent-color: #6366f1;
+  --accent-light: #eef2ff;
+  --accent-text: #4338ca;
+  --accent-border: #c7d2fe;
+}
+
+/* 🟣 BLACK & PURPLE THEME (Default) */
+.theme-black-purple {
+  --bg-main: #08060e;
+  --bg-card: #120d1e;
+  --bg-subtle: #1c142e;
+  --bg-hover: #261b3d;
+  --border-subtle: #2d1f47;
+  --border-strong: #46306e;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --accent-color: #a855f7;
+  --accent-light: #2d184d;
+  --accent-text: #e9d5ff;
+  --accent-border: #7e22ce;
+}
+
+/* ⚪⚫ BLACK & WHITE THEME (High Contrast Monochrome) */
+.theme-black-white {
+  --bg-main: #000000;
+  --bg-card: #0c0c0c;
+  --bg-subtle: #171717;
+  --bg-hover: #262626;
+  --border-subtle: #2d2d2d;
+  --border-strong: #525252;
+  --text-primary: #ffffff;
+  --text-secondary: #d4d4d4;
+  --text-muted: #a3a3a3;
+  --accent-color: #ffffff;
+  --accent-light: #262626;
+  --accent-text: #ffffff;
+  --accent-border: #737373;
+}
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+}
+
+/* Dark mode & Theme-specific component styling overrides */
+.theme-black-purple body,
+.theme-black-purple {
+  background-color: #08060e;
+  color: #f8fafc;
+}
+
+.theme-black-white body,
+.theme-black-white {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Card theme classes */
+.theme-black-purple .bg-white {
+  background-color: #120d1e !important;
+  border-color: #2b1d44 !important;
+  color: #f8fafc;
+}
+
+.theme-black-white .bg-white {
+  background-color: #0c0c0c !important;
+  border-color: #292929 !important;
+  color: #ffffff;
+}
+
+.theme-black-purple .bg-slate-50,
+.theme-black-purple .bg-slate-100 {
+  background-color: #1a132b !important;
+  border-color: #31224f !important;
+  color: #e2e8f0;
+}
+
+.theme-black-white .bg-slate-50,
+.theme-black-white .bg-slate-100 {
+  background-color: #171717 !important;
+  border-color: #2d2d2d !important;
+  color: #f5f5f5;
+}
+
+.theme-black-purple .text-slate-900,
+.theme-black-purple .text-slate-800 {
+  color: #f8fafc !important;
+}
+
+.theme-black-white .text-slate-900,
+.theme-black-white .text-slate-800 {
+  color: #ffffff !important;
+}
+
+.theme-black-purple .text-slate-700,
+.theme-black-purple .text-slate-600 {
+  color: #cbd5e1 !important;
+}
+
+.theme-black-white .text-slate-700,
+.theme-black-white .text-slate-600 {
+  color: #d4d4d4 !important;
+}
+
+.theme-black-purple .text-slate-500,
+.theme-black-purple .text-slate-400 {
+  color: #94a3b8 !important;
+}
+
+.theme-black-white .text-slate-500,
+.theme-black-white .text-slate-400 {
+  color: #a3a3a3 !important;
+}
+
+.theme-black-purple .border-slate-200,
+.theme-black-purple .border-slate-200\/80,
+.theme-black-purple .border-slate-100 {
+  border-color: #2b1d44 !important;
+}
+
+.theme-black-white .border-slate-200,
+.theme-black-white .border-slate-200\/80,
+.theme-black-white .border-slate-100 {
+  border-color: #292929 !important;
+}
+
+/* Black & Purple specific glow accents */
+.theme-black-purple .bg-blue-600,
+.theme-black-purple .bg-indigo-600 {
+  background-color: #9333ea !important;
+}
+
+.theme-black-purple .text-blue-600,
+.theme-black-purple .text-indigo-600,
+.theme-black-purple .text-blue-700,
+.theme-black-purple .text-indigo-700 {
+  color: #c084fc !important;
+}
+
+.theme-black-purple .bg-blue-50,
+.theme-black-purple .bg-indigo-50 {
+  background-color: #261642 !important;
+  color: #e9d5ff !important;
+  border-color: #581c87 !important;
+}
+
+.theme-black-purple .border-blue-500,
+.theme-black-purple .border-indigo-500,
+.theme-black-purple .border-blue-200 {
+  border-color: #7e22ce !important;
+}
+
+/* Black & White specific monochrome accents */
+.theme-black-white .bg-blue-600,
+.theme-black-white .bg-indigo-600,
+.theme-black-white .bg-purple-600 {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+.theme-black-white .text-blue-600,
+.theme-black-white .text-indigo-600,
+.theme-black-white .text-blue-700,
+.theme-black-white .text-indigo-700,
+.theme-black-white .text-purple-600 {
+  color: #ffffff !important;
+}
+
+.theme-black-white .bg-blue-50,
+.theme-black-white .bg-indigo-50,
+.theme-black-white .bg-purple-50 {
+  background-color: #262626 !important;
+  color: #ffffff !important;
+  border-color: #404040 !important;
+}
+
+/* Custom pulse animations for SOS & Fall alerts */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 20px rgba(239, 68, 68, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+  }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+}
+
+@keyframes pulse-ring-warning {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 16px rgba(245, 158, 11, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(245, 158, 11, 0);
+  }
+}
+
+.animate-pulse-warning {
+  animation: pulse-ring-warning 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+}
+
+/* Leaflet map container fix */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.75rem;
+  z-index: 1;
+}
+
+/* Dark mode leaflet map filter */
+.theme-black-purple .leaflet-tile,
+.theme-black-white .leaflet-tile {
+  filter: brightness(0.7) invert(1) contrast(3) hue-rotate(200deg) saturate(0.3);
+}
+
+.theme-black-white .leaflet-tile {
+  filter: brightness(0.6) invert(1) contrast(2) grayscale(1);
+}
